@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sahil Chavan | ML Engineer</title>
+  <meta name="description" content="Portfolio of Sahil Chavan, Machine Learning Engineer & AI Student.">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="main-header">
+    <nav class="container">
+      <div class="logo">SAHIL.CHAVAN</div>
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="mailto:sahilchavanajara327@gmail.com" class="btn btn-navy nav-cta">Get in touch</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <span class="eyebrow">ML ENGINEER</span>
+          <h1 class="hero-title">SAHIL CHAVAN</h1>
+          <p class="hero-desc">B.Tech CSE (AI & ML) student at DYPCET. Building intelligent, reliable, and deployable AI
+            solutions for the real world.</p>
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-white">View Projects</a>
+            <a href="resume/Resume.pdf" class="btn btn-navy" download>Download Resume</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <img src="hero.png" alt="AI Workspace Illustration" class="hero-img">
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+      <div class="container about-grid">
+        <div class="about-card">
+          <h2 class="section-title">About Me</h2>
+          <p>Machine Learning Engineering student with a deep passion for Neural Networks and Agentic AI. I focus on
+            bridging the gap between theoretical models and real-world deployment. My approach is data-driven,
+            efficient, and direct.</p>
+          <div class="about-meta">
+            <div class="meta-item"><strong>Education:</strong> B.Tech CSE (AI & ML), DYPCET</div>
+            <div class="meta-item"><strong>Location:</strong> India</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+      <div class="container">
+        <h2 class="section-title centered">Technical Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-group">
+            <div class="skill-icon">
+              <i class="bi bi-code-slash"></i>
+            </div>
+            <h3>Programming</h3>
+            <ul>
+              <li><i class="bi bi-python"></i> Python</li>
+              <li><i class="bi bi-database"></i> SQL</li>
+              <li><i class="bi bi-filetype-js"></i> JavaScript</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <div class="skill-icon">
+              <i class="bi bi-brain"></i>
+            </div>
+            <h3>ML & AI</h3>
+            <ul>
+              <li><i class="bi bi-graph-up"></i> Scikit-learn</li>
+              <li><i class="bi bi-diagram-3"></i> Pattern Recognition</li>
+              <li><i class="bi bi-search"></i> Anomaly Detection</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <div class="skill-icon">
+              <i class="bi bi-layers"></i>
+            </div>
+            <h3>Deep Learning</h3>
+            <ul>
+              <li><i class="bi bi-stack"></i> TensorFlow</li>
+              <li><i class="bi bi-lightning"></i> PyTorch</li>
+              <li><i class="bi bi-bezier2"></i> Neural Networks</li>
+              <li><i class="bi bi-eye"></i> Computer Vision</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <div class="skill-icon">
+              <i class="bi bi-robot"></i>
+            </div>
+            <h3>Agentic AI</h3>
+            <ul>
+              <li><i class="bi bi-chat-dots"></i> LLM Orchestration</li>
+              <li><i class="bi bi-cpu"></i> Autonomous Agents</li>
+              <li><i class="bi bi-pen"></i> Prompt Engineering</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Selected Projects</h2>
+          <button id="add-project-btn" class="btn btn-navy btn-sm">Add Project</button>
+        </div>
+
+        <div id="projects-grid" class="projects-grid">
+          <!-- Projects are dynamically loaded via script.js -->
+        </div>
+
+        <!-- Add Project Modal -->
+        <div id="project-modal" class="modal">
+          <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>New Project Entry</h2>
+            <form id="add-project-form">
+              <div class="form-group">
+                <label for="project-title">Title</label>
+                <input type="text" id="project-title" required placeholder="e.g., FlowGuard">
+              </div>
+              <div class="form-group">
+                <label for="project-description">Description</label>
+                <textarea id="project-description" required placeholder="Project description..."></textarea>
+              </div>
+              <div class="form-group">
+                <label for="project-link">GitHub URL</label>
+                <input type="url" id="project-link" required placeholder="https://github.com/...">
+              </div>
+              <button type="submit" class="btn btn-navy full-width">Save Project</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+      <div class="container contact-box">
+        <h2 class="section-title white">Let's work together</h2>
+        <div class="contact-links">
+          <a href="mailto:sahilchavanajara327@gmail.com" class="contact-link">Email</a>
+          <a href="https://www.linkedin.com/in/sahil-chavan-b6638034b" target="_blank" class="contact-link">LinkedIn</a>
+          <a href="https://github.com/sahilc497" target="_blank" class="contact-link">GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <div class="container footer-content">
+      <p>&copy; 2024 SAHIL CHAVAN. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
